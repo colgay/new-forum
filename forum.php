@@ -6,8 +6,7 @@ include_once("includes/navbar.php");
 <div class="container-fluid container-page">
 	<ol class="breadcrumb">
 		<li><a href="#">Home</a></li>
-		<li><a href="#">Forum</a></li>
-		<li class="active">Some Forum</li>
+		<li><a href="index.php">Forum</a></li>
 	</ol>
 	<h3>Some Forum</h3>
 	<div class="small"style="margin-bottom: 15px">
@@ -54,7 +53,7 @@ include_once("includes/navbar.php");
 			<tbody>
 				<tr>
 					<td>
-						<div><a href="#">Hello World!</a></div>
+						<div><a href="thread.php">Hello World!</a></div>
 						<div class="small">2016-8-27 7:53PM</div>
 					</td>
 					<td class="text-center"><a href="#">Admin</a></td>
@@ -66,7 +65,7 @@ include_once("includes/navbar.php");
 				</tr>
 				<tr>
 					<td>
-						<div><a href="#">Where is ds?</a></div>
+						<div><a href="thread.php">Where is ds?</a></div>
 						<div class="small">2016-8-27 8:12PM</div>
 					</td>
 					<td class="text-center"><a href="#">honfai99</a></td>
@@ -78,7 +77,7 @@ include_once("includes/navbar.php");
 				</tr>
 				<tr>
 					<td>
-						<div><a href="#">How is it going?</a></div>
+						<div><a href="thread.php">How is it going?</a></div>
 						<div class="small">2016-8-28 12:29PM</div>
 					</td>
 					<td class="text-center"><a href="#">ds</a></td>
@@ -90,7 +89,7 @@ include_once("includes/navbar.php");
 				</tr>
 				<tr>
 					<td>
-						<div><a href="#">Who is Justin Bieber?</a></div>
+						<div><a href="thread.php">Who is Justin Bieber?</a></div>
 						<div class="small">2016-8-28 12:25PM</div>
 					</td>
 					<td class="text-center"><a href="#">justin</a></td>
@@ -102,7 +101,7 @@ include_once("includes/navbar.php");
 				</tr>
 				<tr>
 					<td>
-						<div><a href="#">Why did Harry Styles cut his hair short?</a></div>
+						<div><a href="thread.php">Why did Harry Styles cut his hair short?</a></div>
 						<div class="small">2016-8-28 11:32PM</div>
 					</td>
 					<td class="text-center"><a href="#">harry</a></td>

@@ -91,8 +91,12 @@ html, body {
 	background: #EBEBEB;
 }
 
-.title {
+.big {
 	font-size: 15px;
+}
+
+.big2 {
+	font-size: 17px;
 }
 
 .table {
@@ -132,6 +136,29 @@ html, body {
 
 .pagination li a {
 	transition: background .25s;
+}
+
+.post-side {
+	background: #F0F6FC;
+	border-right: 1px solid #1F66A3;
+	text-align: center;
+	padding: 15px;
+	width: 18%;
+	vertical-align: top;
+}
+
+.post-body {
+	background: white;
+	padding: 15px;
+	min-height: 100px;
+	position: relative;
+}
+
+.post-footer {
+	border-top: 1px solid #1F66A3;
+	padding: 5px;
+	padding-left: 15px;
+	padding-right: 15px;
 }
 
 nav .pagination {
@@ -174,6 +201,15 @@ nav .pagination {
 	padding-right: 20px;
 }
 
+@media (min-width: 768px) {
+	.col-center {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+}
+
 @media (max-width: 767px) {
 	.navbar-blue .navbar-nav .open .dropdown-menu > li > a {
 		color: #F5F5F5;
@@ -184,5 +220,8 @@ nav .pagination {
 	}
 	.container-page {
 		width: 100%;
+	}
+	.col-center {
+
 	}
 }

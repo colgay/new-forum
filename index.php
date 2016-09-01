@@ -16,7 +16,7 @@ include_once("includes/navbar.php");
 					<tbody>
 						<tr>
 							<td style="width:75%">
-								<div><a class="title" href="#">Test Forum</a> <span class="small">(Topics: 24, Posts: 64)</span></div>
+								<div><a class="big" href="forum.php">Test Forum</a> <span class="small">(Topics: 24, Posts: 64)</span></div>
 								<div class="small">blah blah blah...</div>
 							</td>
 							<td>
@@ -33,7 +33,7 @@ include_once("includes/navbar.php");
 					<tbody>
 						<tr>
 							<td style="width:55%">
-								<div class="title"><a href="#">Gaming Forum</a></div>
+								<div class="big"><a href="forum.php">Gaming Forum</a></div>
 								<div class="small">blah blah blah...</div>
 							</td>
 							<td class="text-center" style="width:10%">
@@ -51,7 +51,7 @@ include_once("includes/navbar.php");
 						<tr>
 						<tr>
 							<td style="width:55%">
-								<div class="title"><a href="#">Scripting Forum</a></div>
+								<div class="big"><a href="forum.php">Scripting Forum</a></div>
 								<div class="small">blah blah blah...</div>
 							</td>
 							<td class="text-center" style="width:10%">
@@ -76,7 +76,7 @@ include_once("includes/navbar.php");
 					<tbody>
 						<tr>
 							<td style="width:75%">
-								<div class="title"><a href="#">Spam Forum</a></div>
+								<div class="big"><a href="forum.php">Spam Forum</a></div>
 								<div class="small">(Topics: 0, Posts: 0)</div>
 								<div class="small">blah blah blah...</div>
 							</td>
@@ -85,7 +85,7 @@ include_once("includes/navbar.php");
 						<tr>
 						<tr>
 							<td style="width:75%">
-								<div class="title"><a href="#">Working Forum</a></div>
+								<div class="big"><a href="forum.php">Working Forum</a></div>
 								<div class="small">(Topics: 0, Posts: 0)</div>
 								<div class="small">blah blah blah...</div>
 							</td>

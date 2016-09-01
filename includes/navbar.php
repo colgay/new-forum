@@ -6,11 +6,11 @@
 		<ul class="nav navbar-nav">
 			<li><a href="#">Home</a></li>
 			<li><a href="#">Blog</a></li>
-			<li class="active"><a href="#">Forum</a></li>
+			<li class="active"><a href="index.php">Forum</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
 			<li><a href="#">Sign Up</a></li>
-			<li><a href="#">Login</a></li>
+			<li><a href="login.php">Login</a></li>
 		</ul>
 	</div>
 </nav>
