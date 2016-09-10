@@ -5,6 +5,10 @@ html, body {
 	background: #F5F5F5;
 }
 
+*:focus {
+	outline: none;
+}
+
 .navbar-blue .navbar-brand img {
 	height: 20px;
 	width: auto;
@@ -161,6 +165,11 @@ html, body {
 	padding-right: 15px;
 }
 
+.col-center {
+	float: none;
+	margin: 0 auto;
+}
+
 nav .pagination {
 	margin: 0;
 	margin-bottom: 15px;
@@ -199,15 +208,6 @@ nav .pagination {
 #footer li a {
 	color: #F0F0F0;
 	padding-right: 20px;
-}
-
-@media (min-width: 768px) {
-	.col-center {
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-	}
 }
 
 @media (max-width: 767px) {

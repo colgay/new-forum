@@ -1,4 +1,3 @@
-			</div>
 			<div id="footer">
 				<div class="container-fluid container-page">
 					<ul>

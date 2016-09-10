@@ -9,7 +9,7 @@
 			<li class="active"><a href="index.php">Forum</a></li>
 		</ul>
 		<ul class="nav navbar-nav navbar-right">
-			<li><a href="#">Sign Up</a></li>
+			<li><a href="register.php">Sign Up</a></li>
 			<li><a href="login.php">Login</a></li>
 		</ul>
 	</div>
