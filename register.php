@@ -202,7 +202,7 @@ include_once("includes/navbar.php");
 				$(element).parents(".error-group").addClass("has-success").removeClass("has-error");
 			},
 			submitHandler: function(form) {
-				var result;
+				var result = false;
 
 				$.ajax({
 					type: "POST",
@@ -218,8 +218,6 @@ include_once("includes/navbar.php");
 
 							var html = '<div id="error" class="alert alert-danger">' + data.error + '</div>';
 							$(".panel-body").prepend(html);
-
-							result = false;
 						}
 					}
 				});

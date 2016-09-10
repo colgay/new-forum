@@ -1,10 +1,11 @@
 <?php
 require_once("../config/config.php");
+require_once("functions.php");
 require_once("db_connect.php");
 
 $data = array();
 
-$hash = password_hash($_POST["password"], PASSWORD_DEFAULT);
+$hash = passwordHash($_POST["password"], $config["salt"]);
 
 $sql = "INSERT INTO users (`name`, `nickname`, `email`, `password`, `gender`, `dob`, `ip`, `reg_date`)
 		VALUES (:name, :nickname, :email, :password, :gender, STR_TO_DATE(:dob, '%Y/%m/%d'), :ip, NOW())";

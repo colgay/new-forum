@@ -1,6 +1,8 @@
 <?php
 include_once("includes/header.php");
 include_once("includes/navbar.php");
+
+if (!isset($_SESSION)) session_start();
 ?>
 
 <div id="content">
@@ -11,24 +13,33 @@ include_once("includes/navbar.php");
 				<div class="panel panel-primary">
 					<div class="panel-heading big2 text-center">Login</div>
 					<div class="panel-body">
-						<form id="loginForm" method="post" action="login.php">
-							<div class="form-group">
-								<label for="email">Email address</label>
-								<input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address">
-							</div>
-							<div class="form-group">
-								<label for="password">Password</label>
-								<input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
-							</div>
-							<div class="checkbox">
-								<label>
-									<input type="checkbox" name="remember" value="remember"> Remember me
-								</label>
-							</div>
-							<button type="submit" name="submit" class="btn btn-primary">Login</button>
-						</form>
-					</div>
-					<div class="panel-footer"><a href="#">Forgot your password?</a></div>
+						<?php
+						if (isset($_SESSION["user_email"]) || isset($_POST["submit"])) {
+							echo 'You have been successfully logged in.</div>';
+							header("refresh:5; url=index.php"); 
+						} else {
+							?>
+							<form id="loginForm" method="post" action="login.php">
+								<div class="form-group">
+									<label for="email">Email address</label>
+									<input type="email" class="form-control" id="email" name="email" placeholder="Enter your email address">
+								</div>
+								<div class="form-group">
+									<label for="password">Password</label>
+									<input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" name="remember" value="remember"> Remember me
+									</label>
+								</div>
+								<button type="submit" name="submit" class="btn btn-primary">Login</button>
+							</form>
+						</div>
+						<div class="panel-footer"><a href="#">Forgot your password?</a></div>
+						<?php
+						}
+						?>
 				</div>
 			</div>
 		</div>
@@ -41,19 +52,27 @@ include_once("includes/navbar.php");
 $(document).ready(function(){
 	$("#loginForm").submit(function(event) {
 		var form = $(this);
-		var result;
+		var result = false;
 
-		if ($("#email").val() && $("#password").val()) {
-		    $.ajax({
-				type: "POST",
-				url: "includes/login.php",
-				data: form.serialize(),
-				dataType: "json",
-				success: function(data) {
+	    $.ajax({
+			type: "POST",
+			url: "includes/login.php",
+			data: form.serialize(),
+			dataType: "json",
+			async: false,
+			success: function(data) {
+				if (data.success) {
+					result = true;
+				} else if (data.error) {
+					$("#error").remove();
 
+					var html = '<div id="error" class="alert alert-danger">' + data.error + '</div>';
+					$(".panel-body").prepend(html);
 				}
-			});
-		}
+			}
+		});
+
+		return result;
 	});
 });
 </script>
